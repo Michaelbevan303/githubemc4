@@ -2,11 +2,32 @@
 <head>
     <style>
         body{
-            margin-top: 50px;
-            text-align: center;
+            background-color: black;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600;
             font-size: 70px;
-            font-weight: 700;
-            color: blue;
+            color: red;
+        }
+        .sec1{
+            margin-top: 80px;
+            width: 700px;
+            height: 70vh;
+            text-align: center;
+            background-color: rgb(121, 117, 117);
+            position:absolute;
+            margin-left: 400px;
+        }
+        section div{
+            text-align: center;
+            font-size: 50px;
+            font-weight: 600;
+            color: aliceblue;
+            padding: 20px;
+            border: 1px solid black;
         }
     </style>
     <script>
@@ -23,6 +44,15 @@
         }
         if(h >12){
             h=h-12;
+        }
+        if(h<10){
+            h="0"+h;
+        }
+        if(m <10){
+            m="0"+m;
+        }
+        if(s <10){
+            s="0"+s;
         }
         document.getElementById('hours').innerHTML=h;
         document.getElementById('minutes').innerHTML=m;
@@ -46,16 +76,19 @@
     </script>
 </head>
 <body onload="clock()">
-    Time :
-    <span id="hours">00</span>:
-    <span id="minutes">00</span>:
-    <span id="seconds">00</span>
-    <span id="session">AM</span>
+    <section class="sec1">
+    <h1>Digital Clock</h1>
     <div>
-        Date :
+      <span id="hours">00</span>:
+      <span id="minutes">00</span>:
+      <span id="seconds">00</span>
+      <span id="session">AM</span>
+      </div>
+      <div>
         <span id="date">00</span>/
         <span id="month">00</span>/
         <span id="year">0000</span>
     </div>
+    </section>
 </body>
 </html>
