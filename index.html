@@ -1,1 +1,61 @@
-hi
+<html>
+<head>
+    <style>
+        body{
+            margin-top: 50px;
+            text-align: center;
+            font-size: 70px;
+            font-weight: 700;
+            color: blue;
+        }
+    </style>
+    <script>
+        function clock(){
+        var t=new Date();
+        var h=t.getHours();
+        var m=t.getMinutes();
+        var s=t.getSeconds();
+        var session=document.getElementById('session')
+        if(h >=12){
+            session.innerHTML="PM";
+        }else{
+            session.innerHTML="AM";
+        }
+        if(h >12){
+            h=h-12;
+        }
+        document.getElementById('hours').innerHTML=h;
+        document.getElementById('minutes').innerHTML=m;
+        document.getElementById('seconds').innerHTML=s;
+        
+        var d=new Date();
+        var date=d.getDate();
+        var month=d.getMonth() +1;
+        var year=d.getFullYear();
+        if(date < 10){
+            date="0"+date;
+        }
+        if(month < 10){
+            month="0"+month;
+        }
+        document.getElementById('date').innerHTML=date;
+        document.getElementById('month').innerHTML=month;
+        document.getElementById('year').innerHTML=year;
+    }
+    setInterval(clock);
+    </script>
+</head>
+<body onload="clock()">
+    Time :
+    <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span>
+    <span id="session">AM</span>
+    <div>
+        Date :
+        <span id="date">00</span>/
+        <span id="month">00</span>/
+        <span id="year">0000</span>
+    </div>
+</body>
+</html>
