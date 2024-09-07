@@ -2,9 +2,9 @@
 <head>
     <style>
         body{
-            background-color: black;
+            background-color: rgb(97, 86, 86);
             box-sizing: border-box;
-            align-items: center;
+          
         }
         h1{
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -12,20 +12,21 @@
             font-size: 70px;
             color: red;
         }
-        .sec1{
-            width: 700px;
-            height: 70vh;
-            text-align: center;
+        .section{
             background-color: rgb(121, 117, 117);
             position:absolute;
+           
+        }
+        .div1{
+            margin-top: 90px;
+            text-align: center;
+            background-color: black;
         }
         section div{
-            text-align: center;
             font-size: 50px;
             font-weight: 600;
             color: aliceblue;
             padding: 20px;
-            border: 1px solid black;
         }
     </style>
     <script>
@@ -74,21 +75,21 @@
     </script>
 </head>
 <body onload="clock()">
-    <center>
-    <section class="sec1">
-    <h1>Digital Clock</h1>
-    <div>
-      <span id="hours">00</span>:
-      <span id="minutes">00</span>:
-      <span id="seconds">00</span>
-      <span id="session">AM</span>
-      </div>
-      <div>
-        <span id="date">00</span>/
-        <span id="month">00</span>/
-        <span id="year">0000</span>
+    <section>
+    <div class="div1">
+        <h1>Digital Clock</h1>
+     <div class="div2">
+         <span id="hours">00</span>:
+         <span id="minutes">00</span>:
+         <span id="seconds">00</span>
+         <span id="session">AM</span>
+       </div>
+       <div class="div3">
+         <span id="date">00</span>/
+         <span id="month">00</span>/
+         <span id="year">0000</span>
+       </div>
     </div>
     </section>
-    </center>
 </body>
 </html>
